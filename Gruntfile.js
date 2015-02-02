@@ -32,7 +32,7 @@ module.exports = function (grunt) {
         watch: {
             bower: {
                 files: ['bower.json'],
-                tasks: ['wiredep']
+                tasks: ['wiredep','ngtemplates:dev']
             },
             //js: {
             //  files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
@@ -427,9 +427,7 @@ module.exports = function (grunt) {
                 src:      'views/**/*.html',
                 dest:     'app/scripts/template.js',
                 options:  {
-                    bootstrap:  function() {
-                        return '//no templates';
-                    }
+                    module : '<%= yeoman.appName %>'
                 }
             }
         }
