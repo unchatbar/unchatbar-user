@@ -13,19 +13,34 @@ Peer to peer chat application using WebRTC technologies
 * Clone repository `git clone git://github.com/unchatbar/unchatbar.git`
 * Run `npm install` to install required Node.js modules
 * Run `bower install` to install required Bower components
+
+## Dependencies
+* angular
+* json3
+* es5-shim
+* bootstrap-css-only
+* ngstorage
+* lodash
+
 ## Get Started
 ```javascript
-angular.module('app', ['unchatbar-connection'])
+angular.module('app', ['unchatbar-user'])
 ```
+
 ## Configure
-* define use lcoal storage, for store peerId
- ```javascript
+* store Profile in local Storage
+```js
 ProfileProvider.setLocalStorage([TRUE/FALSE]);
 ```
 ## Usage
+* get Profil Object
+```js
+Profile.get();
+```
 
-TODO
-
-
+* set Profil Object
+```js
+Profile.get([ProfileObject]);
+```
 
 

@@ -10,7 +10,7 @@
  * save client connections , for recall
  *
  */
-angular.module('unchatbar-user').directive('profileAdmin', [
+angular.module('unchatbar-user').directive('unProfileAdmin', [
     function () {
         return {
             restrict: 'E', //E = element, A = attribute, C = class, M = comment

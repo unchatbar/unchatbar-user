@@ -105,26 +105,8 @@ angular.module('unchatbar-user')
                          *
                          */
                         $rootScope.$broadcast('profileUpdate');
-                    },
-
-                    /**
-                     * @ngdoc methode
-                     * @name sendProfileUpdate
-                     * @methodOf unchatbar-user.Profile
-                     * @private
-                     * @description
-                     *
-                     * send profile update to all connected clients
-                     *
-                     */
-                    //REMOVE FROM HERE
-                    /*_sendProfileUpdate: function () {
-                        _.forEach(Connection.getMap(), function (connection, peerId) {
-                            Connection.send(peerId, {action: 'profile', profile: this.get()});
-                        }.bind(this));
-                    }*/
+                    }
                 };
-
                 return api;
             }
         ];

@@ -17,7 +17,7 @@ angular.module('unchatbar-user').run(['$templateCache', function($templateCache)
 
   $templateCache.put('views/unchatbarUser/profile.html',
     "<div data-ng-init=\"init();\" class=\"navbar-brand\">\n" +
-    "  {{profile.label}}\n" +
+    " {{profile.label}}\n" +
     "</div>\n"
   );
 
