@@ -30,6 +30,7 @@ angular.module('app', ['unchatbar-user'])
 
 ## Configure
 * store Profile in local Storage
+
 >
 ```javascript
 ProfileProvider.setLocalStorage([TRUE/FALSE]);
@@ -37,12 +38,14 @@ ProfileProvider.setLocalStorage([TRUE/FALSE]);
 
 ## Usage
 * get Profil Object
+
 >
 ```javascript
 Profile.get();
 ```
 
 * set Profil Object
+
 >
 ```javascript
 Profile.get([ProfileObject]);
