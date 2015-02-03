@@ -23,18 +23,20 @@ Peer to peer chat application using WebRTC technologies
 * lodash
 
 ## Get Started
+>
 ```javascript
 angular.module('app', ['unchatbar-user'])
 ```
 
 ## Configure
 * store Profile in local Storage
+>
 ```javascript
 ProfileProvider.setLocalStorage([TRUE/FALSE]);
 ```
 ## Usage
 * get Profil Object
-```js
+```javascript
 Profile.get();
 ```
 
