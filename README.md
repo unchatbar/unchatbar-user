@@ -50,3 +50,20 @@ Profile.get();
 ```javascript
 Profile.get([ProfileObject]);
 ```
+
+## Directive
+
+* Profile Label
+
+>
+```html
+<un-profile-admin></un-profile-admin>
+```
+
+
+* Profile Admin
+
+>
+```html
+ <un-profile-label></un-profile-label>
+```
