@@ -1,9 +1,9 @@
 {
-  "name": "unchatbar-connection",
+  "name": "unchatbar-user",
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "git://github.com/unchatbar/unchatbar-connection.git"
+    "url": "git://github.com/unchatbar/unchatbar-user.git"
   },
   "engines": {
     "node": ">=0.10.0"
