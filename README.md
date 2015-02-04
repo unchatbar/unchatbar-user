@@ -70,4 +70,4 @@ Profile.get([ProfileObject]);
 
 ## Events
 
-* *profileUpdate* profile was update
+* **profileUpdate**: profile was update
