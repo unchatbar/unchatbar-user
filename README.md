@@ -67,3 +67,7 @@ Profile.get([ProfileObject]);
 ```html
  <un-profile-label></un-profile-label>
 ```
+
+## Events
+
+* *profileUpdate* profile was update
