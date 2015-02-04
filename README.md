@@ -36,7 +36,7 @@ angular.module('app', ['unchatbar-user'])
 ProfileProvider.setLocalStorage([TRUE/FALSE]);
 ```
 
-## Usage
+## API
 * get Profil Object
 
 >
@@ -67,3 +67,7 @@ Profile.get([ProfileObject]);
 ```html
  <un-profile-label></un-profile-label>
 ```
+
+## Events
+
+* **profileUpdate**: profile was update
