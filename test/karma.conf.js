@@ -28,6 +28,8 @@ module.exports = function (config) {
             'bower_components/angularjs-dropdown-multiselect/src/angularjs-dropdown-multiselect.js',
             'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
             'bower_components/angular-mocks/angular-mocks.js',
+            'bower_components/ng-img-crop/compile/minified/ng-img-crop.js',
+            'bower_components/jdenticon/jdenticon.js',
             'app/scripts/constants.js',
             'app/scripts/**/*.js',
             'test/mock/**/*.js',

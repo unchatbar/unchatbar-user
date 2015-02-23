@@ -13,6 +13,8 @@
 angular.module('unchatbar-user').controller('profile', ['$scope', 'Profile',
     function ($scope, Profile) {
 
+
+
         /**
          * @ngdoc property
          * @name profile

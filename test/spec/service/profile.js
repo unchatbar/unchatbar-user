@@ -22,7 +22,7 @@ describe('Serivce: Profile', function () {
             }));
             it('should call `$sessionStorage.$default` with object', function () {
                 expect(sessionStorage.$default).toHaveBeenCalledWith({
-                    profile: {}
+                    profile: {label: '',image: ''}
                 });
             });
             it('should set  `MessageTextService._storage` return value from `$sessionStorage.$default`', function () {

@@ -3,7 +3,7 @@
 /**
  * @author Lars Wiedemann
  * @ngdoc directive
- * @name unchatbar-user.directive:profile
+ * @name unchatbar-user.directive:unProfileAdmin
  * @restrict E
  * @description
  *
@@ -15,8 +15,10 @@ angular.module('unchatbar-user').directive('unProfileAdmin', [
         return {
             restrict: 'E', //E = element, A = attribute, C = class, M = comment
             templateUrl: 'views/unchatbarUser/profile-admin.html',
-            controller: 'profile'
+            controller: 'profile',
+            link: function (scope) {
+                scope.newImage = '';
+            }
         };
     }
 ]);
-

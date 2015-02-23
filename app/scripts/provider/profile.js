@@ -51,7 +51,10 @@ angular.module('unchatbar-user')
                      *
                      */
                     _storageProfile:{
-                        profile: {}
+                        profile: {
+                            label : '',
+                            image : ''
+                        }
                     },
                     /**
                      * @ngdoc methode
@@ -64,7 +67,10 @@ angular.module('unchatbar-user')
                     initStorage : function(){
                         var storage = useLocalStorage ? $localStorage : $sessionStorage;
                         this._storageProfile = storage.$default({
-                            profile: {}
+                            profile: {
+                                label : '',
+                                image : ''
+                            }
                         });
 
                     },
