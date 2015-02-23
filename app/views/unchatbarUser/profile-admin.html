@@ -6,9 +6,11 @@
                    id="profileLabel" data-ng-model="profile.label" placeholder="Enter your name">
         </div>
         <div>
-            <span class="btn-file">
-                <input accept="image/*" type="file" file-model="newImage"/>
-                <img ng-src="{{profile.image}}" data-ng-show="profile.image"/>
+            <span class="btn btn-file">
+                <input accept="image/*" type="file" file-model="newImage" />
+                <span ng-show="profile.image">
+                    <img class="profile-image" ng-src="{{profile.image}}"/>
+                </span>
                 <span ng-show="!profile.image">
                     select your picture
                 </span>
