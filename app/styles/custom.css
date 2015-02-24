@@ -4,8 +4,8 @@ body {
 .cropArea {
     background: #E4E4E4;
     overflow: hidden;
-    width: 500px;
-    height: 350px;
+    width: 200px;
+    height: 150px;
 }
 .btn-file {
     position: relative;

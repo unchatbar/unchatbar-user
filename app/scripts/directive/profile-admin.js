@@ -17,7 +17,7 @@ angular.module('unchatbar-user').directive('unProfileAdmin', [
             templateUrl: 'views/unchatbarUser/profile-admin.html',
             controller: 'profile',
             link: function (scope) {
-                scope.newImage = '';
+
             }
         };
     }
