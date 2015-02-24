@@ -11,6 +11,7 @@
 angular.module('unchatbar-user', [
     'constants',
     'ngStorage',
-    'ngImgCrop'
+    'ngImgCrop',
+    'unchatbar-connection'
 
 ]);

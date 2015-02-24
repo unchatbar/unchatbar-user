@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width">
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap-css-only/css/bootstrap.css" />
-    <link rel="stylesheet" href="bower_components/ng-img-crop/compile/minified/ng-img-crop.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap-css-only/css/bootstrap.css"/>
+    <link rel="stylesheet" href="bower_components/ng-img-crop/compile/minified/ng-img-crop.css"/>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -57,6 +57,18 @@
 <script src="bower_components/lodash/dist/lodash.compat.js"></script>
 <script src="bower_components/ng-img-crop/compile/minified/ng-img-crop.js"></script>
 <script src="bower_components/jdenticon/jdenticon.js"></script>
+<script src="bower_components/peerjs/peer.js"></script>
+<script src="bower_components/unchatbar-connection/app/scripts/app.js"></script>
+<script src="bower_components/unchatbar-connection/app/scripts/run.js"></script>
+<script src="bower_components/unchatbar-connection/app/scripts/template.js"></script>
+<script src="bower_components/unchatbar-connection/app/scripts/provider/broker.js"></script>
+<script src="bower_components/unchatbar-connection/app/scripts/provider/data-connection.js"></script>
+<script src="bower_components/unchatbar-connection/app/scripts/service/peer.js"></script>
+<script src="bower_components/unchatbar-connection/app/scripts/directive/dialer.js"></script>
+<script src="bower_components/unchatbar-connection/app/scripts/directive/login.js"></script>
+<script src="bower_components/unchatbar-connection/app/scripts/directive/peerId.js"></script>
+<script src="bower_components/unchatbar-connection/app/scripts/controller/dialer.js"></script>
+<script src="bower_components/blockies/blockies.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -66,6 +78,8 @@
 
 <script src="scripts/provider/profile.js"></script>
 
+<script src="scripts/config/broker.js"></script>
+
 <script src="scripts/controller/profile.js"></script>
 
 <script src="scripts/directive/fileModel.js"></script>
@@ -73,5 +87,12 @@
 <script src="scripts/directive/profile-admin.js"></script>
 <script src="scripts/run.js"></script>
 <!-- endbuild -->
+<script>
+    angular.module('unchatbar-user').run(['Broker',
+        function (Broker) {
+            Broker.connectServer();
+
+        }]);
+</script>
 </body>
 </html>

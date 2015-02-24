@@ -1,5 +1,7 @@
 <div data-ng-init="init();">
- {{profile.label}}
-    <img class="profile-image" ng-src="{{profile.image}}" data-ng-show="profile.image"/>
+    <div data-ng-show="profile.id">
+        <img class="profile-image" data-ng-src="{{profile.image}}" data-ng-show="profile.image"/>
+        {{profile.id}}
 
+    </div>
 </div>

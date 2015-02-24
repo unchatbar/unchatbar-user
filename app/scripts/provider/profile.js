@@ -32,14 +32,14 @@ angular.module('unchatbar-user')
          * @require $rootScope
          * @require $sessionStorage
          * @require $localStorage
-         * @require Connection
+         * @require Broker
          * @description
          *
          * manage user profile
          *
          */
-        this.$get = ['$rootScope', '$localStorage', '$sessionStorage',
-            function ($rootScope, $localStorage, $sessionStorage) {
+        this.$get = ['$rootScope', '$localStorage', '$sessionStorage', 'Broker',
+            function ($rootScope, $localStorage, $sessionStorage, Broker) {
 
                 var api = {
                     /**
@@ -50,10 +50,11 @@ angular.module('unchatbar-user')
                      * @returns {Object} user/group storage
                      *
                      */
-                    _storageProfile:{
-                        profile: {
-                            label : '',
-                            image : ''
+                    _storageProfile: {
+                        user: {
+                            id: '',
+                            label: '',
+                            image: ''
                         }
                     },
                     /**
@@ -64,15 +65,51 @@ angular.module('unchatbar-user')
                      *
                      * init storage
                      */
-                    initStorage : function(){
+                    initStorage: function () {
                         var storage = useLocalStorage ? $localStorage : $sessionStorage;
                         this._storageProfile = storage.$default({
-                            profile: {
-                                label : '',
-                                image : ''
+                            user: {
+                                id: '',
+                                label: '',
+                                image: ''
                             }
                         });
+                    },
 
+                    /**
+                     * @ngdoc methode
+                     * @name initProfile
+                     * @methodOf unchatbar-user.Profile
+                     * @description
+                     *
+                     * init profile
+                     */
+                    initProfile: function () {
+                        var peerId = Broker.getPeerId();
+                        if (!this._storageProfile.user.id) {
+                            this.set({
+                                id: peerId,
+                                label: peerId,
+                                image: this._getIdenticons(peerId)
+                            });
+                        }
+                    },
+
+                    /**
+                     * @ngdoc methode
+                     * @name _getIdenticons
+                     * @methodOf unchatbar-user.Profile
+                     * @return {String} base64 jpg
+                     * @description
+                     *
+                     * get a identicons
+                     */
+                    _getIdenticons: function (id) {
+                        return blockies.create({ // All options are optional
+                            seed: id, // seed used to generate icon data, default: random
+                            size: 10, // width/height of the icon in blocks, default: 10
+                            scale: 10 // width/height of each block in pixels, default: 5
+                        }).toDataURL("image/jpg");
                     },
 
                     /**
@@ -85,7 +122,7 @@ angular.module('unchatbar-user')
                      *
                      */
                     get: function () {
-                        return _.clone(this._storageProfile.profile);
+                        return _.clone(this._storageProfile.user);
                     },
 
                     /**
@@ -99,7 +136,7 @@ angular.module('unchatbar-user')
                      *
                      */
                     set: function (profile) {
-                        this._storageProfile.profile = profile;
+                        this._storageProfile.user = profile;
                         /**
                          * @ngdoc event
                          * @name profileUpdate

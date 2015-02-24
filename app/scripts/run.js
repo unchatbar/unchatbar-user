@@ -7,8 +7,11 @@
  *
  * Main module of the application.
  */
-angular.module('unchatbar-user').run(['Profile',
-    function (Profile) {
+angular.module('unchatbar-user').run(['$rootScope', 'Profile',
+    function ($rootScope, Profile) {
         Profile.initStorage();
+        $rootScope.$on('BrokerPeerOpen', function () {
+            Profile.initProfile();
+        });
     }
 ]);

@@ -1,13 +1,14 @@
 <div class="col-xs-12 col-sm-9" data-ng-init="init()">
-    <form>
-        <div class="form-group">
-            <label for="profileLabel">Name</label>
-            <input type="text" required="true" onchange="handleFileSelect(event)" class="form-control"
-                   id="profileLabel" data-ng-model="profile.label" placeholder="Enter your name">
-        </div>
-        <div>
+    <div data-ng-show="profile.id">
+        <form>
+            <div class="form-group">
+                <label for="profileLabel">Name</label>
+                <input type="text" required="true" onchange="handleFileSelect(event)" class="form-control"
+                       id="profileLabel" data-ng-model="profile.label" placeholder="Enter your name">
+            </div>
+            <div>
             <span class="btn btn-file">
-                <input accept="image/*" type="file" file-model="newImage" />
+                <input accept="image/*" type="file" file-model="newImage"/>
                 <span ng-show="profile.image">
                     <img class="profile-image" ng-src="{{profile.image}}"/>
                 </span>
@@ -15,12 +16,14 @@
                     select your picture
                 </span>
             </span>
-        </div>
-        <div class="cropArea" ng-show="newImage">
-            <img-crop result-image-size="80" result-image-format="image/jpeg" image="newImage"
-                      result-image="profile.image"></img-crop>
-        </div>
-        <br><hr>
-        <button type="submit" data-ng-click="update()" class="btn btn-default">Save</button>
-    </form>
+            </div>
+            <div class="cropArea" ng-show="newImage">
+                <img-crop result-image-size="80" result-image-format="image/jpeg" image="newImage"
+                          result-image="profile.image"></img-crop>
+            </div>
+            <br>
+            <hr>
+            <button type="submit" data-ng-click="update()" class="btn btn-default">Save</button>
+        </form>
+    </div>
 </div>
