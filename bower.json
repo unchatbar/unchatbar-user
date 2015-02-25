@@ -9,7 +9,7 @@
     "ngstorage": "~0.3.0",
     "lodash": "~2.4.1",
     "ng-img-crop": "~0.3.2",
-    "unchatbar-connection": "https://github.com/unchatbar/unchatbar-connection.git",
+    "unchatbar-connection": "https://github.com/unchatbar/unchatbar-connection.git#0.0.x",
     "blockies": "~0.1.1"
   },
   "main": [
