@@ -24,7 +24,7 @@ angular.module('unchatbar-user').run(['$templateCache', function($templateCache)
     "        </div>\n" +
     "        <div class=\"form-group\">\n" +
     "            <label for=\"profileLabel\">Name</label>\n" +
-    "            <input type=\"text\" required=\"true\" onchange=\"handleFileSelect(event)\" class=\"form-control\"\n" +
+    "            <input type=\"text\" required=\"true\" class=\"form-control\"\n" +
     "                   id=\"profileLabel\" data-ng-model=\"profile.label\" placeholder=\"Enter your name\">\n" +
     "        </div>\n" +
     "        <div class=\"form-group\">\n" +
