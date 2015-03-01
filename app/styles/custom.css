@@ -26,8 +26,11 @@ body {
     cursor: inherit;
 
 }
+
 img.profile-image {
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    border-radius: 100px;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    border-radius: 80px;
+    height : 40px;
+    width:40px;
 }

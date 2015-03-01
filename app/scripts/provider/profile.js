@@ -107,8 +107,8 @@ angular.module('unchatbar-user')
                     _getIdenticons: function (id) {
                         return blockies.create({ // All options are optional
                             seed: id, // seed used to generate icon data, default: random
-                            size: 10, // width/height of the icon in blocks, default: 10
-                            scale: 10 // width/height of each block in pixels, default: 5
+                            size: 5, // width/height of the icon in blocks, default: 10
+                            scale: 5 // width/height of each block in pixels, default: 5
                         }).toDataURL("image/jpg");
                     },
 
