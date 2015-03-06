@@ -1,3 +1,8 @@
+## 0.0.4
+Feature:
+* show password in admin dialog
+
+
 ## 0.0.3
 Bugfix:
 * change profile image size to 40px

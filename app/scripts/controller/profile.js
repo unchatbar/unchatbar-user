@@ -5,13 +5,14 @@
  * @name  unchatbar-user.controller:profile
  * @require $scope
  * @require Profile
+ * @require Broker
  * @description
  *
  * manage user profile
  *
  */
-angular.module('unchatbar-user').controller('profile', ['$scope', 'Profile',
-    function ($scope, Profile) {
+angular.module('unchatbar-user').controller('profile', ['$scope', 'Profile','Broker',
+    function ($scope, Profile,Broker) {
 
 
 
@@ -22,6 +23,15 @@ angular.module('unchatbar-user').controller('profile', ['$scope', 'Profile',
          * @returns {String} name of user
          */
         $scope.profile = {};
+
+        /**
+         * @ngdoc property
+         * @name pass
+         * @propertyOf unchatbar-user.controller:profile
+         * @returns {String} npassword for peer server
+         */
+        $scope.pass = '';
+
 
 
         /**
@@ -35,6 +45,7 @@ angular.module('unchatbar-user').controller('profile', ['$scope', 'Profile',
          */
         $scope.init = function(){
             $scope.profile =  Profile.get();
+            $scope.pass = Broker.getPass();
         };
         /**
          * @ngdoc methode
