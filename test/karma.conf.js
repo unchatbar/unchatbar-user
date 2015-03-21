@@ -29,6 +29,7 @@ module.exports = function (config) {
             'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
             'bower_components/angular-mocks/angular-mocks.js',
             'bower_components/ng-img-crop/compile/minified/ng-img-crop.js',
+            'bower_components/angular-gettext/dist/angular-gettext.js',
             'bower_components/jdenticon/jdenticon.js',
             'bower_components/unchatbar-connection/app/scripts/app.js',
             'bower_components/unchatbar-connection/app/scripts/run.js',

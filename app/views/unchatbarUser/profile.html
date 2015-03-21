@@ -1,6 +1,6 @@
-<div data-ng-init="init();">
+<div class="un-profile" data-ng-init="init();">
     <div data-ng-show="profile.id">
-        <img class="profile-image" data-ng-src="{{profile.image}}" data-ng-show="profile.image"/>
-        {{profile.id}}
+        <span class="hidden-xs text-user">{{profile.id}}</span>
+        <img alt="Profile Picture" data-ng-src="{{profile.image}}" class="img-circle img-user">
     </div>
 </div>

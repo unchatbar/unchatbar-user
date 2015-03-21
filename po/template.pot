@@ -1,0 +1,45 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: unchatbar-user\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: de\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: app/views/unchatbarUser/profile-admin.html:19
+msgid "Display name"
+msgstr "Name"
+
+#: app/views/unchatbarUser/profile-admin.html:20
+msgid "Enter display name"
+msgstr "eingabe des Namen"
+
+#: app/views/unchatbarUser/profile-admin.html:38
+msgid "Password"
+msgstr "Passwort"
+
+#: app/views/unchatbarUser/profile-admin.html:47
+msgid "Save"
+msgstr "speichern"
+
+#: app/views/unchatbarUser/profile-admin.html:33
+msgid "User name"
+msgstr "Name"
+
+#: app/views/unchatbarUser/profile-admin.html:3
+msgid "User settings"
+msgstr "Profile Einstellungen"
+
+#: app/views/unchatbarUser/profile-admin.html:28
+msgid "a short description"
+msgstr "Kurzbeschreibung"
+
+#: app/views/unchatbarUser/profile-admin.html:26
+msgid "short description"
+msgstr "Kurzbeschreibung"

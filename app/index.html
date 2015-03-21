@@ -7,34 +7,18 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap-css-only/css/bootstrap.css" />
-    <link rel="stylesheet" href="bower_components/ng-img-crop/compile/minified/ng-img-crop.css" />
-    <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/custom.css">
+    <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 </head>
 <body data-ng-init="showDirective='profile-label'">
 <div class="page-header">
-    <h1>unchatbar - user</h1>
+    <h1>unchatbar - user</h1><div class="pull-right"> <un-profile-label></un-profile-label></div>
 </div>
 
 <div class="container">
-    <div class="panel panel-primary">
-        <div class="panel-heading">un-profile-admin</div>
-        <div class="panel-body">
-            <un-profile-admin></un-profile-admin>
-        </div>
-    </div>
-    <div class="panel panel-primary">
-        <div class="panel-heading">un-profile-label</div>
-        <div class="panel-body">
-            <un-profile-label></un-profile-label>
-        </div>
-    </div>
-
+    <un-profile-admin></un-profile-admin>
 </div>
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
@@ -58,15 +42,16 @@
 <script src="bower_components/ng-img-crop/compile/minified/ng-img-crop.js"></script>
 <script src="bower_components/peerjs/peer.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/angular-gettext/dist/angular-gettext.js"></script>
 <script src="bower_components/unchatbar-connection/app/scripts/app.js"></script>
 <script src="bower_components/unchatbar-connection/app/scripts/run.js"></script>
 <script src="bower_components/unchatbar-connection/app/scripts/template.js"></script>
+<script src="bower_components/unchatbar-connection/app/scripts/translations.js"></script>
 <script src="bower_components/unchatbar-connection/app/scripts/provider/broker.js"></script>
 <script src="bower_components/unchatbar-connection/app/scripts/provider/data-connection.js"></script>
 <script src="bower_components/unchatbar-connection/app/scripts/service/peer.js"></script>
 <script src="bower_components/unchatbar-connection/app/scripts/directive/dialer.js"></script>
 <script src="bower_components/unchatbar-connection/app/scripts/directive/login.js"></script>
-<script src="bower_components/unchatbar-connection/app/scripts/directive/peerId.js"></script>
 <script src="bower_components/unchatbar-connection/app/scripts/controller/dialer.js"></script>
 <script src="bower_components/unchatbar-connection/app/scripts/controller/model-password.js"></script>
 <script src="bower_components/blockies/blockies.js"></script>
@@ -74,6 +59,7 @@
 <!-- endbuild -->
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/translations.js"></script>
 <script src="scripts/constants.js"></script>
 <script src="scripts/app.js"></script>
 
@@ -89,8 +75,10 @@
 <script src="scripts/run.js"></script>
 <!-- endbuild -->
 <script>
-    angular.module('unchatbar-user').run(['Broker',
-        function (Broker) {
+    angular.module('unchatbar-user').run(['Broker','gettextCatalog',
+        function (Broker,gettextCatalog) {
+            gettextCatalog.setCurrentLanguage('de');
+            gettextCatalog.debug = true;
             Broker.connectServer();
 
         }]);
