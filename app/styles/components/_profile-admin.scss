@@ -4,7 +4,9 @@
   @media (min-width: $screen-sm-min) {
     width: 500px;
   }
-   .menu-header {
+  display: block;
+  position: relative;
+  .menu-header {
     font-weight: 300;
     line-height: 1.25;
   }
@@ -25,7 +27,7 @@
     _cursor: hand;
     margin: 0;
     padding: 0;
-    width:80px;
+    width: 80px;
   }
   .cropArea {
     margin-left: 66.6667px;
