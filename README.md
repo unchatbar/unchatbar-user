@@ -21,6 +21,7 @@ Peer to peer chat application using WebRTC technologies
 * bootstrap-css-only
 * ngstorage
 * lodash
+* gettext
 
 ## Get Started
 >
