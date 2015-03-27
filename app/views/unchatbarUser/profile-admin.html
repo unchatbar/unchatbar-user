@@ -2,15 +2,14 @@
     <div class="menu-header ">
         <span class="" translate>User settings</span>
     </div>
-    <div class="divider mar-no"></div>
     <div class="menu-content">
         <form class="ng-pristine ng-valid">
             <div class="form-group">
-                  <div>
-                      <input class="fileUpload" accept="image/*" type="file" file-model="newImage"/>
-                      <img class="img-circle img-user" ng-src="{{profile.image}}"/>
-                  </div>
-                  <div class="cropArea" data-ng-if="newImage">
+                <div>
+                    <input class="fileUpload" accept="image/*" type="file" file-model="newImage"/>
+                    <img class="img-circle img-user" ng-src="{{profile.image}}"/>
+                </div>
+                <div class="cropArea" data-ng-if="newImage">
                     <img-crop result-image-size="80" result-image-format="image/jpeg" image="newImage"
                               result-image="profile.image"></img-crop>
                 </div>
@@ -39,16 +38,11 @@
                 <input type="text" value="0123456789abcdef" data-ng-model="pass"
                        id="password" class="form-control" readonly="true">
             </div>
-        </form>
-    </div>
-    <div class="divider mar-no"></div>
-    <div class="menu-footer">
-        <div>
-            <button class="btn btn-sm btn-success btn-labeled pull-right fa fa-save icon-lg"
+            <button class="btn btn-sm btn-success btn-labeled fa fa-save icon-lg"
                     data-ng-click="update();newImage='';" translate>
                 Save
             </button>
-        </div>
+        </form>
     </div>
 </div>
 
