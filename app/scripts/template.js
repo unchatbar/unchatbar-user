@@ -6,15 +6,14 @@ angular.module('unchatbar-user').run(['$templateCache', function($templateCache)
     "    <div class=\"menu-header \">\n" +
     "        <span class=\"\" translate>User settings</span>\n" +
     "    </div>\n" +
-    "    <div class=\"divider mar-no\"></div>\n" +
     "    <div class=\"menu-content\">\n" +
     "        <form class=\"ng-pristine ng-valid\">\n" +
     "            <div class=\"form-group\">\n" +
-    "                  <div>\n" +
-    "                      <input class=\"fileUpload\" accept=\"image/*\" type=\"file\" file-model=\"newImage\"/>\n" +
-    "                      <img class=\"img-circle img-user\" ng-src=\"{{profile.image}}\"/>\n" +
-    "                  </div>\n" +
-    "                  <div class=\"cropArea\" data-ng-if=\"newImage\">\n" +
+    "                <div>\n" +
+    "                    <input class=\"fileUpload\" accept=\"image/*\" type=\"file\" file-model=\"newImage\"/>\n" +
+    "                    <img class=\"img-circle img-user\" ng-src=\"{{profile.image}}\"/>\n" +
+    "                </div>\n" +
+    "                <div class=\"cropArea\" data-ng-if=\"newImage\">\n" +
     "                    <img-crop result-image-size=\"80\" result-image-format=\"image/jpeg\" image=\"newImage\"\n" +
     "                              result-image=\"profile.image\"></img-crop>\n" +
     "                </div>\n" +
@@ -43,16 +42,11 @@ angular.module('unchatbar-user').run(['$templateCache', function($templateCache)
     "                <input type=\"text\" value=\"0123456789abcdef\" data-ng-model=\"pass\"\n" +
     "                       id=\"password\" class=\"form-control\" readonly=\"true\">\n" +
     "            </div>\n" +
-    "        </form>\n" +
-    "    </div>\n" +
-    "    <div class=\"divider mar-no\"></div>\n" +
-    "    <div class=\"menu-footer\">\n" +
-    "        <div>\n" +
-    "            <button class=\"btn btn-sm btn-success btn-labeled pull-right fa fa-save icon-lg\"\n" +
+    "            <button class=\"btn btn-sm btn-success btn-labeled fa fa-save icon-lg\"\n" +
     "                    data-ng-click=\"update();newImage='';\" translate>\n" +
     "                Save\n" +
     "            </button>\n" +
-    "        </div>\n" +
+    "        </form>\n" +
     "    </div>\n" +
     "</div>\n" +
     "\n"
