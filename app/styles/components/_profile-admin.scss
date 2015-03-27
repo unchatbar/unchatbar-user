@@ -1,5 +1,5 @@
 .un-profile-admin {
-  @extend .page-content, .panel, .panel-default;
+  @extend .panel, .panel-default;
   margin: 20px 0;
   .menu-header {
     @extend .panel-heading;
@@ -41,9 +41,5 @@
 
   .menu-footer {
     padding: 15px;
-  }
-
-  .menu-header {
-    @extend .dropdown-header;
   }
 }
