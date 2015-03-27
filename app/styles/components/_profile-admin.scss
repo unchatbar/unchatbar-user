@@ -3,8 +3,11 @@
   margin: 20px 0;
   .menu-header {
     @extend .panel-heading;
-    font-weight: 300;
-    line-height: 1.25;
+    color: inherit;
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: 0;
+
   }
 
   .img-user {
