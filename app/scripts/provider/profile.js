@@ -54,7 +54,8 @@ angular.module('unchatbar-user')
                         user: {
                             id: '',
                             label: '',
-                            image: ''
+                            image: '',
+                            description: ''
                         }
                     },
                     /**
@@ -71,7 +72,8 @@ angular.module('unchatbar-user')
                             user: {
                                 id: '',
                                 label: '',
-                                image: ''
+                                image: '',
+                                description: ''
                             }
                         });
                     },
