@@ -10,36 +10,54 @@
 
   }
 
-  .img-user {
-    overflow: hidden;
-    position: relative;
-  }
-  .fileUpload {
-    z-index: 999;
-    line-height: 0;
-    font-size: 50px;
-    position: absolute;
-    opacity: 0;
-    filter: alpha(opacity=0);
-    -ms-filter: "alpha(opacity=0)";
-    cursor: pointer;
-    _cursor: hand;
-    margin: 0;
-    padding: 0;
-    width: 80px;
-  }
-  .cropArea {
-    margin-left: 66.6667px;
-    margin-top: 70px;
-  }
   .menu-content {
     @extend .panel-body;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 15px;
+
+    input[type=file] {
+      z-index: 999;
+      line-height: 0;
+      font-size: 50px;
+      position: absolute;
+      opacity: 0;
+      filter: alpha(opacity=0);
+      -ms-filter: "alpha(opacity=0)";
+      cursor: pointer;
+      _cursor: hand;
+      margin: 0;
+      padding: 0;
+      width: 80px;
+    }
+    input[type=text] {
+      @extend .form-control;
+    }
+    .profile-admin-group {
+      @extend .form-group;
+      .upload {
+        img {
+          @extend .img-circle;
+          overflow: hidden;
+          position: relative;
+        }
+      }
+      .cropArea {
+        margin-left: 66.6667px;
+        margin-top: 70px;
+      }
+
+    }
+    button {
+      @extend .btn, .btn-sm, .btn-success, .fa, .fa-save;
+      &:before {
+        margin-left: -10px;
+        margin-right: 5px;
+        padding: 5px 10px;
+        background-color: rgba(0, 0, 0, 0.05);
+        display: inline-block;
+      }
+    }
   }
 
-  .menu-footer {
-    padding: 15px;
-  }
 }

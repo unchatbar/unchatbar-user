@@ -1,8 +1,10 @@
 .un-profile {
   .text-user{
+    @extend .hidden-xs, .text-user;
     margin: 0 5px;
   }
-  .img-user {
+  img {
+    @extend .img-circle;
     height: 40px;
     margin: 5px;
     width: 40px;

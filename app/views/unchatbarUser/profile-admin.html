@@ -1,45 +1,43 @@
-<div role="menu" class="un-profile-admin with-arrow" data-ng-init="init();" data-ng-show="profile.id">
+<div role="menu" class="un-profile-admin " data-ng-init="init();" data-ng-show="profile.id">
     <div class="menu-header ">
-        <span class="" translate>User settings</span>
+        <span translate>User settings</span>
     </div>
     <div class="menu-content">
-        <form class="ng-pristine ng-valid">
-            <div class="form-group">
-                <div>
-                    <input class="fileUpload" accept="image/*" type="file" file-model="newImage"/>
-                    <img class="img-circle img-user" ng-src="{{profile.image}}"/>
+        <form data-ng-submit="update();profileAdmin.$setPristine();newImage='';" name="profileAdmin">
+            <div class="profile-admin-group">
+                <div class="upload">
+                    <input class="fileUpload" data-ng-click="profileAdmin.$dirty = true;" accept="image/*" type="file" file-model="newImage"/>
+                    <img class="img-circle" ng-src="{{profile.image}}"/>
                 </div>
                 <div class="cropArea" data-ng-if="newImage">
                     <img-crop result-image-size="80" result-image-format="image/jpeg" image="newImage"
                               result-image="profile.image"></img-crop>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="profile-admin-group">
                 <label for="display-name" translate>Display name</label>
                 <input type="text" placeholder="{{'Enter display name' | translate}}" id="display-name"
-                       data-ng-model="profile.label"
-                       class="form-control" required="true">
+                       data-ng-model="profile.label" required="true">
 
             </div>
-            <div class="form-group">
+            <div class="profile-admin-group">
                 <label for="user-description" translate>short description</label>
                 <input type="text" data-ng-model="profile.description"
                        placeholder="{{'a short description' | translate}}"
-                       id="user-description"
-                       class="form-control">
+                       id="user-description">
             </div>
-            <div class="form-group">
+            <div class="profile-admin-group">
                 <label for="user-name" translate>User name</label>
-                <input type="text" data-ng-model="profile.id" id="user-name" class="form-control"
-                       readonly="true">
+                <input type="text" data-ng-model="profile.id" id="user-name" readonly="true">
             </div>
-            <div class="form-group">
+            <div class="profile-admin-group">
                 <label for="password" translate>Password</label>
                 <input type="text" value="0123456789abcdef" data-ng-model="pass"
-                       id="password" class="form-control" readonly="true">
+                       id="password"  readonly="true">
             </div>
-            <button class="btn btn-sm btn-success btn-labeled fa fa-save icon-lg"
-                    data-ng-click="update();newImage='';" translate>
+            <button class=""
+                    data-ng-disabled="!profileAdmin.$dirty"
+                    data-ng-click="update();profileAdmin.$setPristine();newImage='';" translate>
                 Save
             </button>
         </form>
