@@ -1,13 +1,5 @@
 .un-profile-admin {
-  @extend .panel, .panel-default;
-  margin: 20px 0;
-
-  .menu-content {
-    @extend .panel-body;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 15px;
-
+  form {
     input[type=file] {
       z-index: 999;
       line-height: 0;
