@@ -1,20 +1,20 @@
-/* VENDOR - Default fall-backs and external files.
+/* Vendors
 ========================================================================== */
-
+// bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
-@import "components-font-awesome/scss/font-awesome";
+@import "components-font-awesome/scss/font-awesome.scss";
+@import "unchatbar-connection/app/styles/main.scss";
+// endbower
 
-/* Variable
+/* Variables
 ========================================================================== */
-@import "_variables";
+@import "variables";
 
-/* Layout
+/* Layouts
 ========================================================================== */
-@import "_layout";
+@import "layout";
 
-
-/* components
+/* Components
 ========================================================================== */
-@import "components/_profile";
-@import "components/_profile-admin";
-
+@import "components/profile";
+@import "components/profile-admin";

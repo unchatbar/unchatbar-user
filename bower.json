@@ -22,7 +22,7 @@
     "app/scripts/controller/*.js",
     "app/scripts/directive/*.js",
     "app/styles/custom.css",
-    "app/styles/**/*.scss"
+    "app/styles/main.scss"
   ],
   "devDependencies": {
     "angular-mocks": "~1.3.0",

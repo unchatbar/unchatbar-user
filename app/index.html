@@ -1,30 +1,36 @@
 <!doctype html>
 <html class="no-js" ng-app="unchatbar-user">
 <head>
-    <meta charset="utf-8">
-    <base href="/">
-    <title>unchatbar connection</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
+  <meta charset="utf-8">
+  <base href="/">
+  <title>unchatbar connection</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/ng-img-crop/compile/minified/ng-img-crop.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
 </head>
 <body data-ng-init="showDirective='profile-label'">
 <div class="page-header">
-    <h1>unchatbar - user</h1><div class="pull-right"> <un-profile-label></un-profile-label></div>
+  <h1>unchatbar - user</h1>
+
+  <div class="pull-right">
+    <un-profile-label></un-profile-label>
+  </div>
 </div>
 
 <div class="container">
-    <un-profile-admin></un-profile-admin>
+  <un-profile-admin></un-profile-admin>
 </div>
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
+  your browser</a> to improve your experience.</p>
 <![endif]-->
-
 
 <!-- build:js(.) scripts/oldieshim.js -->
 <!--[if lt IE 9]>
@@ -32,7 +38,6 @@
 <script src="bower_components/json3/lib/json3.js"></script>
 <![endif]-->
 <!-- endbuild -->
-
 
 <!-- build:js(.) scripts/vendor.js -->
 <!-- bower:js -->
@@ -76,13 +81,13 @@
 <script src="scripts/run.js"></script>
 <!-- endbuild -->
 <script>
-    angular.module('unchatbar-user').run(['Broker','gettextCatalog',
-        function (Broker,gettextCatalog) {
-            gettextCatalog.setCurrentLanguage('de');
-            gettextCatalog.debug = true;
-            Broker.connectServer();
+  angular.module('unchatbar-user').run(['Broker', 'gettextCatalog',
+    function (Broker, gettextCatalog) {
+      gettextCatalog.setCurrentLanguage('de');
+      gettextCatalog.debug = true;
+      Broker.connectServer();
 
-        }]);
+    }]);
 </script>
 </body>
 </html>
