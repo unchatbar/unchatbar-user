@@ -1,3 +1,9 @@
+## 0.1.0
+Feature:
+* add sass
+* ad translation
+
+
 ## 0.0.4
 Feature:
 * show password in admin dialog
