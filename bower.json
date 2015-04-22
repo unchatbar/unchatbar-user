@@ -12,7 +12,7 @@
     "lodash": "^2.4.1",
     "ng-img-crop": "^0.3.2",
     "ngstorage": "^0.3.0",
-    "unchatbar-connection": "^0.1.4"
+    "unchatbar-connection": "^0.1.5"
   },
   "main": [
     "app/scripts/app.js",
