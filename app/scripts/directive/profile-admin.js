@@ -14,12 +14,9 @@ angular.module('unchatbar-user').directive('unProfileAdmin', [
     function () {
         return {
             restrict: 'E',
-            templateUrl: function(element,scope){
-                return scope.customTemplateUrl || 'views/unchatbarUser/profile-admin.html';
-            },
-            scope : {
-                customTemplateUrl: '@'
-            },
+            templateUrl: function(element){
+                return element.attr('data-custom-template-url') || 'views/unchatbarUser/profile-admin.html';
+            }
             controller: 'profile',
             link: function (scope) {
 
