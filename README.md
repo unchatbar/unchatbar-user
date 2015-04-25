@@ -58,7 +58,7 @@ Profile.get([ProfileObject]);
 
 >
 ```html
-<un-profile-admin></un-profile-admin>
+<un-profile-admin data-custom-template-url="[CUSTOM-TEMPLATEPATH]"></un-profile-admin>
 ```
 
 
@@ -66,7 +66,7 @@ Profile.get([ProfileObject]);
 
 >
 ```html
- <un-profile-label></un-profile-label>
+ <un-profile-label data-custom-template-url="[CUSTOM-TEMPLATEPATH]"></un-profile-label>
 ```
 
 ## Events

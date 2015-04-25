@@ -13,8 +13,13 @@
 angular.module('unchatbar-user').directive('unProfileLabel', [
     function () {
         return {
-            restrict: 'E', //E = element, A = attribute, C = class, M = comment
-            templateUrl: 'views/unchatbarUser/profile.html',
+            restrict: 'E',
+            templateUrl: function(element,scope){
+                return scope.customTemplateUrl || 'views/unchatbarUser/profile.html';
+            },
+            scope : {
+                customTemplateUrl: '@'
+            },
             controller: 'profile'
         };
     }

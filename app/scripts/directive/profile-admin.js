@@ -13,8 +13,13 @@
 angular.module('unchatbar-user').directive('unProfileAdmin', [
     function () {
         return {
-            restrict: 'E', //E = element, A = attribute, C = class, M = comment
-            templateUrl: 'views/unchatbarUser/profile-admin.html',
+            restrict: 'E',
+            templateUrl: function(element,scope){
+                return scope.customTemplateUrl || 'views/unchatbarUser/profile-admin.html';
+            },
+            scope : {
+                customTemplateUrl: '@'
+            },
             controller: 'profile',
             link: function (scope) {
 
